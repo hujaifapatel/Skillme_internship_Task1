@@ -1,0 +1,7 @@
+.claude/
+.agents/
+.taste-skill/
+skills-lock.json
+linkedin-post.md
+.DS_Store
+Thumbs.db
