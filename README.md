@@ -2,6 +2,8 @@
 
 My Week 1 task for the SkillMe internship. It's the static layout of a Kanban board made with HTML and CSS. JavaScript will be added in Week 2.
 
+Made by Hujaifa Patel.
+
 ## What I had to do
 
 1. Create `index.html`, `style.css` and `script.js`, then `git init` and commit
