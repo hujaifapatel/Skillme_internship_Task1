@@ -31,16 +31,16 @@
         </div>
 
         <div class="summary">
-          <p><b>2 of 7</b> tasks done</p>
+          <p><b id="done-summary">0 of 0</b> tasks done</p>
           <div class="summary-bar">
             <span class="bar-todo"></span>
             <span class="bar-progress"></span>
             <span class="bar-done"></span>
           </div>
           <ul class="summary-list">
-            <li class="todo">To do <b>3</b></li>
-            <li class="progress">In progress <b>2</b></li>
-            <li class="done">Done <b>2</b></li>
+            <li class="todo">To do <b id="sum-todo">0</b></li>
+            <li class="progress">In progress <b id="sum-doing">0</b></li>
+            <li class="done">Done <b id="sum-done">0</b></li>
           </ul>
         </div>
       </div>
@@ -48,7 +48,7 @@
       <form id="add-task-form" class="add-task-form">
         <div class="field big">
           <label for="task-title">Task</label>
-          <input type="text" id="task-title" placeholder="Write the release notes">
+          <input type="text" id="task-title" placeholder="Write the release notes" maxlength="120">
         </div>
         <div class="field">
           <label for="task-priority">Priority</label>
@@ -64,127 +64,32 @@
         </div>
         <button type="submit">Add task</button>
       </form>
+      <p id="form-error" class="form-error" role="alert"></p>
 
       <div class="board">
 
         <section class="column" data-status="todo">
-          <h2 class="column-title todo">To do <span class="task-count">(3)</span></h2>
-          <div class="task-list">
-
-            <div class="task-card">
-              <div class="card-top">
-                <span class="priority priority-high">High</span>
-                <span class="tag">Design</span>
-              </div>
-              <h3 class="task-title">Draw the three onboarding illustrations</h3>
-              <p class="task-desc">Welcome, invite your team, first board. Use the new palette.</p>
-              <div class="card-bottom">
-                <span class="due-date">Due Fri 20 Nov</span>
-                <span class="checklist">0/3</span>
-                <span class="avatar grey">SL</span>
-              </div>
-            </div>
-
-            <div class="task-card">
-              <div class="card-top">
-                <span class="priority priority-medium">Medium</span>
-                <span class="tag">Docs</span>
-              </div>
-              <h3 class="task-title">Document the v2 API endpoints</h3>
-              <p class="task-desc">Auth, pagination and error codes, each with a curl example.</p>
-              <div class="card-bottom">
-                <span class="due-date">Due Tue 24 Nov</span>
-                <span class="avatar green">RM</span>
-              </div>
-            </div>
-
-            <div class="task-card">
-              <div class="card-top">
-                <span class="priority priority-low">Low</span>
-                <span class="tag">Accessibility</span>
-              </div>
-              <h3 class="task-title">Check colour contrast on every screen</h3>
-              <div class="card-bottom">
-                <span class="due-date">Due Sat 28 Nov</span>
-                <span class="avatar brown">AK</span>
-              </div>
-            </div>
-
-          </div>
+          <h2 class="column-title todo">To do <span class="task-count">(0)</span></h2>
+          <div class="task-list"></div>
           <div class="drop-area">Drop tasks here</div>
         </section>
 
-        <section class="column" data-status="in-progress">
-          <h2 class="column-title progress">In progress <span class="task-count">(2)</span></h2>
-          <div class="task-list">
-
-            <div class="task-card">
-              <div class="card-top">
-                <span class="priority priority-high">High</span>
-                <span class="tag">Frontend</span>
-              </div>
-              <h3 class="task-title">Build the mobile navigation menu</h3>
-              <p class="task-desc">Collapses under 700px. Opens and closes from the keyboard.</p>
-              <div class="card-bottom">
-                <span class="due-date soon">Due tomorrow</span>
-                <span class="checklist">3/5</span>
-                <span class="avatar brown">AK</span>
-              </div>
-            </div>
-
-            <div class="task-card">
-              <div class="card-top">
-                <span class="priority priority-medium">Medium</span>
-                <span class="tag">DevOps</span>
-              </div>
-              <h3 class="task-title">Run lint and tests on every pull request</h3>
-              <div class="card-bottom">
-                <span class="due-date">Due Sat 21 Nov</span>
-                <span class="checklist">1/4</span>
-                <span class="avatar green">RM</span>
-              </div>
-            </div>
-
-          </div>
+        <section class="column" data-status="doing">
+          <h2 class="column-title progress">In progress <span class="task-count">(0)</span></h2>
+          <div class="task-list"></div>
           <div class="drop-area">Drop tasks here</div>
         </section>
 
         <section class="column" data-status="done">
-          <h2 class="column-title done">Done <span class="task-count">(2)</span></h2>
-          <div class="task-list">
-
-            <div class="task-card finished">
-              <div class="card-top">
-                <span class="priority priority-high">High</span>
-                <span class="tag">UX</span>
-              </div>
-              <h3 class="task-title">Wireframe the board in Figma</h3>
-              <div class="card-bottom">
-                <span class="due-date">Finished 14 Nov</span>
-                <span class="avatar grey">SL</span>
-              </div>
-            </div>
-
-            <div class="task-card finished">
-              <div class="card-top">
-                <span class="priority priority-low">Low</span>
-                <span class="tag">Research</span>
-              </div>
-              <h3 class="task-title">Compare four existing Kanban tools</h3>
-              <div class="card-bottom">
-                <span class="due-date">Finished 12 Nov</span>
-                <span class="avatar green">RM</span>
-              </div>
-            </div>
-
-          </div>
+          <h2 class="column-title done">Done <span class="task-count">(0)</span></h2>
+          <div class="task-list"></div>
           <div class="drop-area">Drop tasks here</div>
         </section>
 
       </div>
     </main>
 
-    <footer>Kanso · Week 1.</footer>
+    <footer>Kanso · Week 2. Double-click a task title to edit it.</footer>
   </div>
 
   <script src="script.js"></script>

@@ -465,6 +465,66 @@ footer {
   color: var(--light-text);
 }
 
+/* ---------- Week 2: JavaScript parts ---------- */
+
+.form-error {
+  min-height: 20px;
+  margin-top: 6px;
+  font-size: 13px;
+  color: var(--priority-high);
+}
+
+input.invalid {
+  outline: 2px solid var(--priority-high);
+  outline-offset: -1px;
+}
+
+.card-actions {
+  display: flex;
+  gap: 4px;
+  margin-left: auto;
+}
+
+.card-actions .icon-btn {
+  width: 26px;
+  height: 26px;
+  padding: 0;
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  background: transparent;
+  color: var(--grey-text);
+  font-size: 14px;
+  line-height: 1;
+}
+
+.card-actions .icon-btn:hover:not(:disabled) {
+  background: var(--green);
+  border-color: var(--green);
+  color: white;
+  opacity: 1;
+}
+
+.card-actions .icon-btn.delete:hover {
+  background: var(--priority-high);
+  border-color: var(--priority-high);
+}
+
+.card-actions .icon-btn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.task-title {
+  cursor: text;
+}
+
+.edit-input {
+  height: 34px;
+  margin: 8px 0 4px;
+  font-size: 15px;
+  font-weight: 500;
+}
+
 @media (max-width: 1000px) {
   .page {
     padding: 0 24px;
@@ -500,9 +560,14 @@ footer {
     flex: 1;
   }
 
-  button {
+  .add-task-form button {
     width: 100%;
     height: 44px;
+  }
+
+  .card-actions .icon-btn {
+    width: 32px;
+    height: 32px;
   }
 
   .board {
