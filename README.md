@@ -2,6 +2,8 @@
 
 My Kanban board for the SkillMe internship. Week 1 was the layout in HTML and CSS. In Week 2 I added JavaScript so you can add tasks, move them between columns, delete them and edit their titles.
 
+**Live demo:** https://hujaifapatel.github.io/Skillme_internship_Task1/
+
 Made by Hujaifa Patel.
 
 ## Week 1 - Layout
